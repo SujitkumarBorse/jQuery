@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 4</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+      <div style="list-style: none;">
+
+            <ol type="1" style="width: 50%; margin: auto;" id="first_OL">
+                  <li> index 0: javascript</li>
+                  <li> index 1: jQuery</li>
+                  <li> index 2: Angular</li>
+                  <li> index 3: Bootstrap 4</li>
+                  <li> index 4: Html/Css</li>
+                  <li> index 5: Angular 7</li>
+                  <li> index 6: Bootstrap 3</li>
+            </ol>
+<br><br>
+            <ol type="1" style="width: 50%; margin: auto;" id="second_OL">
+                  <li> index 0: javascript</li>
+                  <li> index 1: jQuery</li>
+                  <li> index 2: Angular 5</li>
+                  <li> index 3: Bootstrap 4</li>
+                  <li> index 4: Html/Css</li>
+                  <li> index 5: Angular 7</li>
+                  <li> index 6: Bootstrap 3</li>
+            </ol>
+
+            <button id="btn_id"> Click Me</button>
+
+      </div>
+
+      <script>
+            $(document).ready(function () {
+                  $('#btn_id').click(function () {
+
+                        //  $('*').css({
+                        //        "backgroundColor":"red",
+                        //        "color":"white"
+                        //  });
+
+                        //  $(this).css({ //this represent current element
+                        //        "backgroundColor":"skyblue",
+                        //        "color":"black"
+                        //  });
+
+                        //  $("[type]").hide("slow");
+
+                        //  $('li:odd').css({
+                        //        "color":"yellow"
+                        //  });
+
+                        // $('li:first-child').css({
+                        //       "color": "blue",
+                        //       "font-size": "20px"
+                        // });
+
+                        // $('#first_OL li:nth-child(3)').css({
+                        //       "color": "red",
+                        //       "font-size": "20px"
+                        // });
+
+                        // $('#first_OL li:nth-last-child(3)').css({
+                        //       "color": "blue",
+                        //       "font-size": "20px"
+                        // });
+
+                        $('#first_OL li:nth-child(2),#second_OL li:nth-last-child(3)').css({
+                              "color": "blue",
+                              "font-size": "20px"
+                        });
+                  });
+            });
+      </script>
+</body>
+
+</html>

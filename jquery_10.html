@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 10 focus() Vs blur()</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+      <p>
+            The blur() is an inbuilt method is jQuery that is used to remove focus from the selected element. This
+            method start the blur event or it can be attached a function to run when a blur event occurs.
+      </p>
+
+      <h3>focus() vs blur()</h3>
+      <input type="text" name="" id="textbox">
+      <span id="showData"> Welcome</span>
+      <span id="showDataForBlur"> Take Care</span>
+
+
+      <script>
+
+            $(document).ready(function () {
+                  $('span').css('display', 'none');
+                  $('#textbox').focus(function () {
+                        $('#showData').css('display', 'inline').fadeOut(4000);
+                  });
+                  $('#textbox').blur(function () {
+                        $('#showDataForBlur').css('display', 'inline').fadeOut(4000);
+                  });
+            });
+      </script>
+</body>
+
+</html>

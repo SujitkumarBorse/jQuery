@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 20 Image pop up after page load</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <style>
+            
+            #popUpMain {
+                  position: fixed;
+                  width: 100%;
+                  height: 100vh;
+                  background: rgba(0, 0, 0, 0.3);
+                  z-index: 1001;
+            }
+
+            #popUp {
+                  width: 500px;
+                  height: 250px;
+                  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('taj.jpg');
+                  background-size: cover;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  box-shadow: 1px 2px 5px 3px white;
+                  text-align: center;
+                  font-family: sans-serif;
+
+            }
+
+            #newsHeading {
+                  transform: translateY(40px);
+                  color: white;
+                  
+            }
+            #emailId{
+                  width: 60%;
+                  padding: 5px;
+                  margin-top: 60px;
+                  margin-bottom: 20px;
+            }
+            .submiteID{
+                  background-color: #0fc0fc;
+                  border: none;
+                  font-size: 1rem;
+                  padding: 0.6rem 1rem;
+                  color: white;
+            }
+      </style>
+</head>
+
+<body>
+
+      <div id="popUpMain" style="display:none;" >      
+            <div id="popUp">
+                  <h1 id="newsHeading">Subscribe to our News Letter</h1>
+                  <input type="email" name="" id="emailId" placeholder="user@email.com"> <br>
+                  <button class="submiteID"> Subscribe </button>
+                  <button class="submiteID"> No Thanks </button>
+            </div>
+      </div>
+
+      <script>
+            $(document).ready(function(){
+                  setTimeout(function(){
+                        $('#popUpMain').css('display','block');
+                  },3000);
+            });
+            $('.submiteID').click(function(){
+                  $('#popUpMain').css('display','none');
+            });
+      </script>
+</body>
+
+</html>

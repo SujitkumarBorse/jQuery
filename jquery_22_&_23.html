@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 22 & 23 TextBox Form validations</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <style>
+
+      </style>
+</head>
+
+<body>
+      <div class="container"><br>
+            <h2 class="text-center text-info ">Simple Login Form validations </h2>
+            <div class="row">
+                  <div class="col-md-8 m-auto d-block">
+
+                        <form  class="bg-light">
+
+                              <div class="form-group">
+                                    <label for="username">Username :</label>
+                                    <input id="username" type="text" name="username" class="form-control">
+                              </div>
+                              <div id="Errusername"></div>
+
+                              <div class="form-group">
+                                    <label for="passWord">PassWord :</label>
+                                    <input id="passWord" type="password" name="passWord" class="form-control">
+                              </div>
+                              <div id="ErrpassWord"></div>
+
+                              <div class="form-group">
+                                          <label for="confirmpassWord">Confirm PassWord :</label>
+                                          <input id="confirmpassWord" type="password" name="confirmpassWord" class="form-control">
+                                    </div>
+                                    <div id="ErrconfirmpassWord"></div>
+      
+                              <div class="checkbox">
+                                    <label><input type="checkbox" name="remember">Remember me</label>
+                              </div>
+
+                              <input type="submit" id="submit" name="button" class="btn btn-success">
+                        </form>
+                  </div>
+            </div>
+      </div>
+      <script>
+            $(document).ready(function () {
+                  $('#submit').click(function () {
+
+                        var user = $('#username').val();
+                        if (user == "") {
+                              $('#Errusername').html('* username must be filled.');
+                              $('#Errusername').css('color', 'red');
+                              return false;
+                        }
+                        if ((user.length <=3) || (user.length >= 15)) {
+                              $('#Errusername').html('* username must be between 3 to 15 charactor.');
+                              $('#Errusername').css('color', 'red');
+                              return false;
+                        }
+
+                        var pass = $('#passWord').val();
+                        if(pass == "") {
+                              $('#ErrpassWord').html('* password must be filled.');
+                              $('#ErrpassWord').css('color', 'red');
+                              return false;
+                        }
+                        if((pass.length <=5) || (pass.length >= 12)) {
+                              $('#ErrpassWord').html('*password must be between 5 to 12 charactor.');
+                              $('#ErrpassWord').css('color', 'red');
+                              return false;
+                        }
+
+                        var confirmpass = $('#confirmpassWord').val();
+                        if(confirmpass != pass){
+                              $('#ErrconfirmpassWord').html('* password are not matching.');
+                              $('#ErrconfirmpassWord').css('color', 'red');
+                              return false;
+                        }
+                        else{
+                              $('#ErrconfirmpassWord').html('');
+                              return true;
+                        }
+                  });
+            });
+      </script>
+</body>
+
+</html>

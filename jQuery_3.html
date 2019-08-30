@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 3</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+      <h2>CSS using jquery</h2>
+      <a href="#" id="anchor">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste voluptatibus at voluptas
+            porro dolor labore! Ipsa rerum veritatis blanditiis, error a tenetur omnis ex consequuntur quod, possimus
+            esse laborum architecto.</a><br>
+
+      <button id="jqueryCss">Click Me</button>
+
+      <script>
+            $(document).ready(function () {
+                  $('#jqueryCss').click(function () {
+                        $('#anchor').css({
+                              "textDecoration": "none",
+                              "color":"red",
+                              "backgroundColor":"skyblue",
+                              "font-size":"20px"
+                        });
+                  });
+            });
+      </script>
+</body>
+
+</html>

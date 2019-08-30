@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 2</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+      <p id="hide" style="color: red;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ex quod et pariatur eveniet harum ad soluta tenetur atque architecto voluptatibus, veniam maiores accusamus sed, id ipsa alias, perferendis magnam!</p>
+
+      <p id="hide1" style="color: red;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ex quod et pariatur eveniet harum ad soluta tenetur atque architecto voluptatibus, veniam maiores accusamus sed, id ipsa alias, perferendis magnam!</p>
+
+      <p class="hide3" style="color: rgb(0, 255, 98);">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ex quod et pariatur eveniet harum ad soluta tenetur atque architecto voluptatibus, veniam maiores accusamus sed, id ipsa alias, perferendis magnam!</p>
+      <br>
+      <br>
+      <ul>
+            <li  style="color:blue;">1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur nihil quas, iusto odit facilis vitae temporibus. Et quo non mollitia quia quos dicta unde distinctio ut dolores </li>
+
+            <li  style="color:blue;">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur nihil quas, iusto odit facilis vitae temporibus. Et quo non mollitia quia quos dicta unde distinctio ut dolores </li>
+
+            <li  style="color:blue;">3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur nihil quas, iusto odit facilis vitae temporibus. Et quo non mollitia quia quos dicta unde distinctio ut dolores </li>
+
+            <li  style="color:blue;">4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur nihil quas, iusto odit facilis vitae temporibus. Et quo non mollitia quia quos dicta unde distinctio ut dolores </li>
+      </ul>
+      <button id="btn"> Hide </button>
+
+
+
+      <script>
+            $(document).ready(function(){
+                  $('#btn').click(function(){
+                        $('li:last').hide();
+                  });
+            });
+      </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 1</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+      <div id="test"> I am Sujitkumar...!!! </div>
+      <!-- <button onclick="hide()">hide</button> -->
+
+      <button id="hide">hide</button>
+      <button id="show">show</button>
+
+      <!-- <button id="hideshow">Hide/show</button> -->
+      <script>
+            // document.getElementById('test').innerHTML="Hello World... By javascript...!!!";
+            // function hide() {
+            //       document.getElementById('test').style.display = "none";
+            // }
+
+
+            $(document).ready(function () {
+                  // $('#test').text("Hello World...By jQuery...!!!");
+                  $('#hide').click(function(){
+                        $('#test').hide();
+                  });
+                  
+                  $('#show').click(function(){
+                        $('#test').show();
+                  });
+             });
+
+            // $(document).ready(function () {
+            //       $('#hideshow').click(function(){
+            //             $('#test').toggle();
+            //       });
+
+            // });
+      </script>
+</body>
+
+</html>

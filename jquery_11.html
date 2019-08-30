@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 11 hide()/show(), toggle()</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+      <p>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla a reiciendis facilis alias velit nemo deserunt nostrum illum voluptatum. Culpa dolorum obcaecati officiis non tempora perspiciatis placeat iusto reiciendis fugit.
+      </p>
+
+      <button id="btn">Hide/Show</button>
+
+      <script>
+
+            $(document).ready(function () {
+                  $('#btn').click(function(){
+                        // $('p').toggle('slow');
+                        $('p').toggle(1000);
+                  });
+            });
+      </script>
+</body>
+
+</html>

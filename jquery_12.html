@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 12  slider effect </title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <style>
+            #panel,#flip{
+                  padding:5px;
+                  text-align: center;
+                  background-color: rgb(34, 162, 212);
+                  border: 1px solid black;
+            }
+            #panel{
+                  padding:50px;
+                  display: none;
+            }
+            h3{
+                  text-align: center;
+                  color: red;
+                  text-transform: uppercase;
+            }
+
+      </style>
+</head>
+
+<body>
+      <h3>SlideDown and slideUp effect in jquery</h3>
+      <div id="flip"> Click the slide for Down and Up</div>
+      <div id="panel">Hello World...!!!</div>
+      <script>
+
+            $(document).ready(function () {
+                  $('#flip').click(function(){
+                       $('#panel').slideDown(1000);
+                  });
+                  $('#flip').dblclick(function(){
+                       $('#panel').slideUp(1000);
+                  });
+            });
+      </script>
+</body>
+
+</html>

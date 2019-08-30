@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 5 Events</title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+      <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A distinctio ullam tenetur dignissimos animi minus quam laboriosam eum voluptate blanditiis id iusto adipisci, porro consequatur beatae aperiam incidunt nulla ad!
+      </p>
+      <button id="btn_id"> Click Me</button>
+      <script>
+            $(document).ready(function(){
+                  $('#btn_id').click(function(){
+                        $('p').css("color","red");
+                        // $('p').remove();
+                  });
+            });
+      </script>
+</body>
+</html>

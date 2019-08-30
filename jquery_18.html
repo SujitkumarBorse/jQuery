@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>jQuery 18 Animate Methods </title>
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <style>
+            h2 {
+                  text-align: center;
+                  text-transform: uppercase;
+            }
+
+            .animateDiv {
+                  width: 90px;
+                  height: 90px;
+                  position: relative;
+                  background-color: red;
+                  border: 1px solid black;
+            }
+      </style>
+</head>
+
+<body>
+      <h2>JQuery Animate Methos</h2>
+      <p> The animate() Methods performs a custom animation of set of css properties.</p>
+      <br><br>
+      <button id="btn">Animate()</button>
+      <br><br>
+      <div class="animateDiv"></div>
+
+      <script>
+            $(document).ready(function () {
+                  $('.animateDiv,#btn').click(function () {
+                        // $(this).css('backgroundColor','blue');
+                        $('.animateDiv').animate({
+                              left: 500,
+                              width: 190,
+                              height: 190
+                        });
+                        $('.animateDiv').animate({
+                              top: 200
+                        });
+                        $('.animateDiv').animate({
+                              top: 200,
+                              left: 0,
+                              width: 90/2,
+                              height: 90/2
+                        });
+                        $('.animateDiv').animate({
+                              top: 0,
+                              left: 0,
+                              width: 90,
+                              height: 90
+                        });
+                        $('.animateDiv').animate({
+                              top: 0,
+                              left: 800,
+                              width: 90/3,
+                              height: 90/3
+                        });
+                        $('.animateDiv').animate({
+                              top: 0,
+                              left: 80,
+                              width: 90/3,
+                              height: 90/3
+                        });
+                  });
+            });
+      </script>
+</body>
+
+</html>
